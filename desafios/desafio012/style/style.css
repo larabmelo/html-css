@@ -53,7 +53,9 @@ section.imagem {
 }
 
 section.imagem > p {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.265);
+    width: 400px;
+    padding-left: 5px;
 }
 
 
