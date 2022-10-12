@@ -47,9 +47,13 @@ section.normal {
     color: black;
 }
 
-section.image {
-    background-color: rgb(6, 6, 6);
+section.imagem {
+    background-color: rgb(75, 73, 73);
     color: white;
+}
+
+section.imagem > p {
+    background-color: black;
 }
 
 
