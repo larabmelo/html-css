@@ -33,7 +33,7 @@ header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
     font-family: var(--fonte2);
-    font-size: 8vw;
+    font-size: clamp(50px, 8vw, 80px);
 }
 
 header > p {
@@ -52,15 +52,17 @@ header a:hover footer a:hover {
 
 section {
     padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 3em;
+    padding-bottom: 6vh;
+    line-height: clamp(2em, 3.5em, 4em);
     padding-left: 30px;
     font-family: var(--fonte3);
 }
 
 section p {
     font-family: var(--fonte3);
-    font-size: 3.5vw;
+    font-size: clamp(20px, 3vw, 30px);
+    padding-bottom: 1em;
+
 }
 
 section.normal {
@@ -71,14 +73,28 @@ section.normal {
 section.imagem {
     background-color: rgb(75, 73, 73);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.47);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.265);
+    background-color: rgba(0, 0, 0, 0.499);
     padding: 5px;
+    text-shadow: 1px 1px 0px black;
 }
 
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+
+}
 
 footer {
     background-color: black;
