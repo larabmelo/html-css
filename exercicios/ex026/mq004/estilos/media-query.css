@@ -2,10 +2,91 @@
 
 /* Todas as demais mídias */
 
-@media print {
+/* Typical Device Breakpoints
+-----------------------------
+- extra small devices, small phones: up to 600px
+- small devices like large phones, small tablets: 600px till 768px
+- medium devices like landscape tablets: 768px till 992px
+- large devices like laptops, desktops: 992 till 1200px
+- extra large devices: 1200px and up
+
+
+ @media screen and (max-width:600px) {
 
 }
 
-@media screen {
+@media screen and (min-width: 600px) and (max-width:768px) {
+
+} 
+*/
+
+@media print { /* IMPRESSAO */
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+       background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressao foi feita atarves do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* MEDIUM DEVICES */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* LARGE DEVICES */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
     
+}
+
+@media screen and (min-width: 1200px) { /* EXTRA LARGE DEVICES */
+    body {
+    background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+
 }
